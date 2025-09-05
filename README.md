@@ -121,7 +121,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Website: [bootqamps.com](https://bootqamps.com)
 - Email: hello@bootqamps.com
-- Twitter: [@bootqamps](https://twitter.com/bootqamps)
+- Location: Seattle, WA
 
 ---
 
