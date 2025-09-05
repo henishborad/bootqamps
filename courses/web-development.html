@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Fundamentals - Bootqamps</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .course-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            margin-top: 70px;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+            line-height: 1.8;
+        }
+        .chapter {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        .chapter h2 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .chapter h3 {
+            color: #1f2937;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.25rem;
+        }
+        .code-block {
+            background: #1f2937;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #fef3c7;
+            padding: 1rem;
+            border-left: 4px solid #f59e0b;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .progress-bar {
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 4px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            height: 100%;
+            width: 25%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            gap: 1rem;
+        }
+        .btn-nav {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-back {
+            background: #6b7280;
+            color: white;
+        }
+        .btn-back:hover {
+            background: #4b5563;
+        }
+        .btn-next {
+            background: #6366f1;
+            color: white;
+        }
+        .btn-next:hover {
+            background: #5b21b6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">🚀 Bootqamps</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <section class="course-header">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div>
+                    <span style="background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem;">Beginner Level</span>
+                </div>
+            </div>
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">Web Development Fundamentals</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                Master the building blocks of the web: HTML, CSS, and JavaScript. Build responsive websites and interactive web applications from scratch.
+            </p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-clock"></i>
+                    <span>8 weeks</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-book"></i>
+                    <span>12 chapters</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-users"></i>
+                    <span>500+ students</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5 rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Progress -->
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Chapter 1 of 12 - Getting Started</p>
+    </div>
+
+    <!-- Course Content -->
+    <div class="course-content">
+        <div class="chapter">
+            <h2><i class="fas fa-play-circle" style="margin-right: 0.5rem;"></i>Chapter 1: Introduction to Web Development</h2>
+            
+            <h3>Welcome to Web Development!</h3>
+            <p>
+                Web development is the process of creating websites and web applications that run on the internet. 
+                In this comprehensive course, you'll learn the three fundamental technologies that power the modern web:
+            </p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><strong>HTML (HyperText Markup Language)</strong> - The structure and content of web pages</li>
+                <li><strong>CSS (Cascading Style Sheets)</strong> - The styling and layout of web pages</li>
+                <li><strong>JavaScript</strong> - The interactive behavior and functionality of web pages</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>💡 Pro Tip:</strong> Think of HTML as the skeleton, CSS as the skin and clothing, and JavaScript as the muscles that make everything move!
+            </div>
+
+            <h3>What You'll Build</h3>
+            <p>
+                Throughout this course, you'll build several real-world projects including:
+            </p>
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>A personal portfolio website</li>
+                <li>A responsive business landing page</li>
+                <li>An interactive to-do list application</li>
+                <li>A weather dashboard with API integration</li>
+            </ul>
+
+            <h3>Your First HTML Document</h3>
+            <p>
+                Let's start with the most basic HTML document. Every HTML page follows this basic structure:
+            </p>
+
+            <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+
+            <h3>Understanding the Structure</h3>
+            <p>Let's break down what each part does:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><code>&lt;!DOCTYPE html&gt;</code> - Tells the browser this is an HTML5 document</li>
+                <li><code>&lt;html&gt;</code> - The root element that contains all other elements</li>
+                <li><code>&lt;head&gt;</code> - Contains metadata about the page (not visible to users)</li>
+                <li><code>&lt;title&gt;</code> - Sets the page title shown in the browser tab</li>
+                <li><code>&lt;body&gt;</code> - Contains all the visible content of the page</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>🎯 Exercise:</strong> Create your own HTML file using the structure above. Change the title and add your own heading and paragraph. Open it in your web browser to see the result!
+            </div>
+
+            <h3>HTML Elements and Tags</h3>
+            <p>
+                HTML uses elements to structure content. Elements are created using tags, which are keywords 
+                surrounded by angle brackets. Most elements have an opening tag and a closing tag:
+            </p>
+
+            <div class="code-block">
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;strong&gt;This text is bold&lt;/strong&gt;
+&lt;em&gt;This text is italic&lt;/em&gt;
+            </div>
+
+            <h3>Common HTML Elements</h3>
+            <p>Here are some of the most commonly used HTML elements:</p>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <thead>
+                        <tr style="background: #f8fafc;">
+                            <th style="padding: 0.75rem; border: 1px solid #e5e7eb; text-align: left;">Element</th>
+                            <th style="padding: 0.75rem; border: 1px solid #e5e7eb; text-align: left;">Purpose</th>
+                            <th style="padding: 0.75rem; border: 1px solid #e5e7eb; text-align: left;">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;h1&gt; to &lt;h6&gt;</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Headings (largest to smallest)</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;h1&gt;Main Title&lt;/h1&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;p&gt;</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Paragraphs</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;p&gt;Some text&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;a&gt;</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Links</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;a href="url"&gt;Link&lt;/a&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;img&gt;</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Images</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;img src="image.jpg" alt="Description"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;div&gt;</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Generic container</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>&lt;div&gt;Content&lt;/div&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>What's Next?</h3>
+            <p>
+                In the next chapter, we'll dive deeper into HTML structure and learn about semantic elements 
+                that make your websites more accessible and SEO-friendly. We'll also start building our first project!
+            </p>
+
+            <div class="highlight">
+                <strong>📚 Homework:</strong> Practice creating HTML documents with different headings, paragraphs, and links. 
+                Try to create a simple "About Me" page with your name, a brief description, and links to your social media profiles.
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a href="../index.html#courses" class="btn-nav btn-back">
+                <i class="fas fa-arrow-left"></i>
+                Back to Courses
+            </a>
+            <a href="#" class="btn-nav btn-next">
+                Next Chapter
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚀 Bootqamps</h3>
+                    <p>Empowering the next generation of developers through quality education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#courses">All Courses</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bootqamps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

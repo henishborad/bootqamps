@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming - Bootqamps</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .course-header {
+            background: linear-gradient(135deg, #3776ab 0%, #ffd43b 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            margin-top: 70px;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+            line-height: 1.8;
+        }
+        .chapter {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        .chapter h2 {
+            color: #3776ab;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .chapter h3 {
+            color: #1f2937;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.25rem;
+        }
+        .code-block {
+            background: #1f2937;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .python-keyword { color: #ff7b72; }
+        .python-string { color: #a5d6ff; }
+        .python-number { color: #79c0ff; }
+        .python-comment { color: #8b949e; }
+        .highlight {
+            background: #e0f2fe;
+            padding: 1rem;
+            border-left: 4px solid #3776ab;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .progress-bar {
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 4px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #3776ab, #ffd43b);
+            height: 100%;
+            width: 15%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            gap: 1rem;
+        }
+        .btn-nav {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-back {
+            background: #6b7280;
+            color: white;
+        }
+        .btn-back:hover {
+            background: #4b5563;
+        }
+        .btn-next {
+            background: #3776ab;
+            color: white;
+        }
+        .btn-next:hover {
+            background: #2d5aa0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">🚀 Bootqamps</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <section class="course-header">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div>
+                    <span style="background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem;">Beginner Level</span>
+                </div>
+            </div>
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">Python Programming</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                Master Python programming from basics to advanced concepts. Perfect for beginners and career changers looking to enter the world of programming.
+            </p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-clock"></i>
+                    <span>10 weeks</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-book"></i>
+                    <span>15 chapters</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-users"></i>
+                    <span>750+ students</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-star"></i>
+                    <span>4.8/5 rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Progress -->
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Chapter 1 of 15 - Getting Started with Python</p>
+    </div>
+
+    <!-- Course Content -->
+    <div class="course-content">
+        <div class="chapter">
+            <h2><i class="fas fa-play-circle" style="margin-right: 0.5rem;"></i>Chapter 1: Introduction to Python Programming</h2>
+            
+            <h3>Why Python?</h3>
+            <p>
+                Python is one of the most popular and versatile programming languages in the world. It's used by companies 
+                like Google, Netflix, Instagram, and NASA for everything from web development to artificial intelligence. 
+                Here's why Python is perfect for beginners:
+            </p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><strong>Easy to Read:</strong> Python's syntax is clean and resembles natural language</li>
+                <li><strong>Versatile:</strong> Use it for web development, data science, AI, automation, and more</li>
+                <li><strong>Large Community:</strong> Millions of developers and extensive documentation</li>
+                <li><strong>High Demand:</strong> Python developers are among the highest paid in tech</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>🐍 Fun Fact:</strong> Python was named after the British comedy group "Monty Python's Flying Circus," not the snake!
+            </div>
+
+            <h3>What You'll Learn</h3>
+            <p>
+                By the end of this course, you'll be able to build real Python applications including:
+            </p>
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>A personal expense tracker</li>
+                <li>A web scraper for gathering data</li>
+                <li>A simple game (like Tic-Tac-Toe)</li>
+                <li>A basic web application with Flask</li>
+                <li>Data analysis projects with pandas</li>
+            </ul>
+
+            <h3>Your First Python Program</h3>
+            <p>
+                Let's start with the traditional "Hello, World!" program. In Python, it's incredibly simple:
+            </p>
+
+            <div class="code-block">
+<span class="python-comment"># This is your first Python program!</span>
+<span class="python-keyword">print</span>(<span class="python-string">"Hello, World!"</span>)
+            </div>
+
+            <p>
+                That's it! Just one line of code. When you run this program, it will display "Hello, World!" on your screen.
+            </p>
+
+            <h3>Understanding the Code</h3>
+            <p>Let's break down what happened:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><code>#</code> - This creates a comment. Comments are notes for humans and are ignored by Python</li>
+                <li><code>print()</code> - This is a function that displays text on the screen</li>
+                <li><code>"Hello, World!"</code> - This is a string (text) that we want to display</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>🎯 Try It:</strong> Change "Hello, World!" to your name and run the program again. What happens?
+            </div>
+
+            <h3>Variables and Data Types</h3>
+            <p>
+                Variables are like containers that store data. In Python, you can create variables easily:
+            </p>
+
+            <div class="code-block">
+<span class="python-comment"># Creating variables</span>
+name = <span class="python-string">"Alice"</span>
+age = <span class="python-number">25</span>
+height = <span class="python-number">5.6</span>
+is_student = <span class="python-keyword">True</span>
+
+<span class="python-comment"># Using variables</span>
+<span class="python-keyword">print</span>(<span class="python-string">"My name is"</span>, name)
+<span class="python-keyword">print</span>(<span class="python-string">"I am"</span>, age, <span class="python-string">"years old"</span>)
+<span class="python-keyword">print</span>(<span class="python-string">"My height is"</span>, height, <span class="python-string">"feet"</span>)
+<span class="python-keyword">print</span>(<span class="python-string">"Am I a student?"</span>, is_student)
+            </div>
+
+            <h3>Python Data Types</h3>
+            <p>Python has several built-in data types:</p>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <thead>
+                        <tr style="background: #f8fafc;">
+                            <th style="padding: 0.75rem; border: 1px solid #e5e7eb; text-align: left;">Data Type</th>
+                            <th style="padding: 0.75rem; border: 1px solid #e5e7eb; text-align: left;">Description</th>
+                            <th style="padding: 0.75rem; border: 1px solid #e5e7eb; text-align: left;">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>str</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Text/String</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>"Hello"</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>int</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Whole numbers</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>42</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>float</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Decimal numbers</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>3.14</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>bool</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">True/False values</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>True</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>list</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;">Ordered collection</td>
+                            <td style="padding: 0.75rem; border: 1px solid #e5e7eb;"><code>[1, 2, 3]</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Basic Operations</h3>
+            <p>
+                Python can perform mathematical operations just like a calculator:
+            </p>
+
+            <div class="code-block">
+<span class="python-comment"># Mathematical operations</span>
+addition = <span class="python-number">10</span> + <span class="python-number">5</span>        <span class="python-comment"># Result: 15</span>
+subtraction = <span class="python-number">10</span> - <span class="python-number">5</span>     <span class="python-comment"># Result: 5</span>
+multiplication = <span class="python-number">10</span> * <span class="python-number">5</span>   <span class="python-comment"># Result: 50</span>
+division = <span class="python-number">10</span> / <span class="python-number">5</span>        <span class="python-comment"># Result: 2.0</span>
+power = <span class="python-number">10</span> ** <span class="python-number">2</span>          <span class="python-comment"># Result: 100</span>
+
+<span class="python-keyword">print</span>(<span class="python-string">"10 + 5 ="</span>, addition)
+<span class="python-keyword">print</span>(<span class="python-string">"10 - 5 ="</span>, subtraction)
+<span class="python-keyword">print</span>(<span class="python-string">"10 * 5 ="</span>, multiplication)
+<span class="python-keyword">print</span>(<span class="python-string">"10 / 5 ="</span>, division)
+<span class="python-keyword">print</span>(<span class="python-string">"10 ** 2 ="</span>, power)
+            </div>
+
+            <h3>Getting User Input</h3>
+            <p>
+                You can make your programs interactive by getting input from users:
+            </p>
+
+            <div class="code-block">
+<span class="python-comment"># Getting user input</span>
+name = <span class="python-keyword">input</span>(<span class="python-string">"What's your name? "</span>)
+age = <span class="python-keyword">input</span>(<span class="python-string">"How old are you? "</span>)
+
+<span class="python-keyword">print</span>(<span class="python-string">"Hello"</span>, name + <span class="python-string">"!"</span>)
+<span class="python-keyword">print</span>(<span class="python-string">"You are"</span>, age, <span class="python-string">"years old."</span>)
+            </div>
+
+            <div class="highlight">
+                <strong>🎯 Exercise:</strong> Create a program that asks for your name and favorite color, then prints a personalized message like "Hello Alice, I love the color blue too!"
+            </div>
+
+            <h3>What's Next?</h3>
+            <p>
+                In the next chapter, we'll learn about conditional statements (if/else) that allow your programs to make decisions. 
+                We'll also explore loops that let you repeat actions automatically!
+            </p>
+
+            <div class="highlight">
+                <strong>📚 Practice Assignment:</strong> 
+                <br>1. Create a simple calculator that asks for two numbers and an operation (+, -, *, /)
+                <br>2. Make a program that converts temperatures from Celsius to Fahrenheit
+                <br>3. Build a "Mad Libs" game that asks for different words and creates a funny story
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a href="../index.html#courses" class="btn-nav btn-back">
+                <i class="fas fa-arrow-left"></i>
+                Back to Courses
+            </a>
+            <a href="#" class="btn-nav btn-next">
+                Next Chapter
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚀 Bootqamps</h3>
+                    <p>Empowering the next generation of developers through quality education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#courses">All Courses</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bootqamps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootqamps - Learn Technology Skills</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🚀 Bootqamps</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Master Technology Skills with <span class="highlight">Bootqamps</span></h1>
+                <p class="hero-description">
+                    Learn coding, programming languages, web development, and software engineering through 
+                    comprehensive text-based courses designed for all skill levels.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Start Learning</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line">
+                        <span class="keyword">function</span> 
+                        <span class="function-name">learnTechnology</span>() {
+                    </div>
+                    <div class="code-line indent">
+                        <span class="keyword">return</span> 
+                        <span class="string">"Success!"</span>;
+                    </div>
+                    <div class="code-line">}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Bootqamps?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Text-Based Learning</h3>
+                    <p>Comprehensive written courses that you can read at your own pace, perfect for deep understanding.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Practical Projects</h3>
+                    <p>Learn by building real-world projects that showcase your skills to potential employers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expert Content</h3>
+                    <p>Courses created by industry professionals with years of experience in software development.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Self-Paced</h3>
+                    <p>Learn at your own speed with lifetime access to all course materials and updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="section-title">Popular Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="course-level">Beginner</div>
+                    </div>
+                    <h3 class="course-title">Web Development Fundamentals</h3>
+                    <p class="course-description">
+                        Learn HTML, CSS, and JavaScript from scratch. Build responsive websites and interactive web applications.
+                    </p>
+                    <div class="course-stats">
+                        <span><i class="fas fa-clock"></i> 8 weeks</span>
+                        <span><i class="fas fa-book"></i> 12 chapters</span>
+                    </div>
+                    <a href="courses/web-development.html" class="btn btn-outline">Start Course</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="course-level">Beginner</div>
+                    </div>
+                    <h3 class="course-title">Python Programming</h3>
+                    <p class="course-description">
+                        Master Python programming from basics to advanced concepts. Perfect for beginners and career changers.
+                    </p>
+                    <div class="course-stats">
+                        <span><i class="fas fa-clock"></i> 10 weeks</span>
+                        <span><i class="fas fa-book"></i> 15 chapters</span>
+                    </div>
+                    <a href="courses/python-programming.html" class="btn btn-outline">Start Course</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="course-level">Intermediate</div>
+                    </div>
+                    <h3 class="course-title">Advanced JavaScript</h3>
+                    <p class="course-description">
+                        Deep dive into modern JavaScript, ES6+, async programming, and popular frameworks like React.
+                    </p>
+                    <div class="course-stats">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-book"></i> 18 chapters</span>
+                    </div>
+                    <a href="courses/advanced-javascript.html" class="btn btn-outline">Start Course</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="course-level">Intermediate</div>
+                    </div>
+                    <h3 class="course-title">Database Design & SQL</h3>
+                    <p class="course-description">
+                        Learn database fundamentals, SQL queries, and how to design efficient database systems.
+                    </p>
+                    <div class="course-stats">
+                        <span><i class="fas fa-clock"></i> 6 weeks</span>
+                        <span><i class="fas fa-book"></i> 10 chapters</span>
+                    </div>
+                    <a href="courses/database-sql.html" class="btn btn-outline">Start Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Bootqamps</h2>
+                    <p>
+                        Bootqamps is a modern learning platform dedicated to making technology education accessible 
+                        to everyone. We believe in the power of text-based learning, allowing students to absorb 
+                        information at their own pace and revisit concepts as needed.
+                    </p>
+                    <p>
+                        Our courses are designed by industry experts who understand what skills are needed in today's 
+                        tech landscape. Whether you're a complete beginner or looking to advance your career, 
+                        we have the resources to help you succeed.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Students Enrolled</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Courses Available</p>
+                        </div>
+                        <div class="stat">
+                            <h3>95%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="learning-illustration">
+                        <div class="book-stack">
+                            <div class="book book-1">HTML/CSS</div>
+                            <div class="book book-2">JavaScript</div>
+                            <div class="book book-3">Python</div>
+                            <div class="book book-4">React</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Start Learning?</h3>
+                    <p>Join thousands of students who have transformed their careers with Bootqamps.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@bootqamps.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚀 Bootqamps</h3>
+                    <p>Empowering the next generation of developers through quality education.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="courses/web-development.html">Web Development</a></li>
+                        <li><a href="courses/python-programming.html">Python Programming</a></li>
+                        <li><a href="courses/advanced-javascript.html">Advanced JavaScript</a></li>
+                        <li><a href="courses/database-sql.html">Database & SQL</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Student Resources</a></li>
+                        <li><a href="#">Career Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bootqamps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
